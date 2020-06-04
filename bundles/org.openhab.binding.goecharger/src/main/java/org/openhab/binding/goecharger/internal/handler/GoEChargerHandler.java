@@ -260,17 +260,17 @@ public class GoEChargerHandler extends BaseThingHandler {
                 if (goeResponse.energy == null) {
                     return UnDefType.UNDEF;
                 }
-                return new QuantityType<>((Double) (goeResponse.energy[7] / 10d), SmartHomeUnits.WATT);
+                return new QuantityType<>((Double) (goeResponse.energy[7] / 10d), SmartHomeUnits.KILOWATT);
             case POWER_L2:
                 if (goeResponse.energy == null) {
                     return UnDefType.UNDEF;
                 }
-                return new QuantityType<>((Double) (goeResponse.energy[8] / 10d), SmartHomeUnits.WATT);
+                return new QuantityType<>((Double) (goeResponse.energy[8] / 10d), SmartHomeUnits.KILOWATT);
             case POWER_L3:
                 if (goeResponse.energy == null) {
                     return UnDefType.UNDEF;
                 }
-                return new QuantityType<>((Double) (goeResponse.energy[9] / 10d), SmartHomeUnits.WATT);
+                return new QuantityType<>((Double) (goeResponse.energy[9] / 10d), SmartHomeUnits.KILOWATT);
         }
         return UnDefType.UNDEF;
     }
